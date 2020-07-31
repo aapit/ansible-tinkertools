@@ -1,2 +1,0 @@
-- name: Install CopyQ for clipboard management
-  apt: name=copyq update_cache=yes

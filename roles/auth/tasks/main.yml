@@ -1,9 +1,0 @@
----
-- name: Install Yubikey Authenticator
-  apt: name=yubioath-desktop
-
-- name: Install 1password CLI
-  unarchive:
-    src: https://cache.agilebits.com/dist/1P/op/pkg/v0.9.1/op_linux_amd64_v0.9.1.zip
-    dest: /usr/local/bin
-    remote_src: yes
