@@ -1,36 +1,15 @@
 # About
-This is my Ansible setup to provision a 'workhorse' Ubuntu (latest version LTS) machine.
+This is my Ansible setup to provision tools for tinkering and hacking.
+I use this on top of my [ansible-workhorse](https://github.com/aapit/ansible-workhorse) Ansible setup.
 
-# Installation
-## 1. Ubuntu
-Install the minimal version of Ubuntu, without extra software / bloatware.
-
-## 2. Ansible
-Install Ansible:
+# Running the whole provisioning routine
 ```bash
-$ sudo apt install ansible
+make
 ```
 
-## 3. Passwordless `sudo`
-Add passwordless sudo rights:
+# Running provisioning modules (roles) by tag
 ```bash
-$ sudo visudo -f /etc/sudoers.d/overrides
-```
-In this file, add the line:
-```
-MyUserName ALL=NOPASSWD: ALL
+make tag=foo
 ```
 
-## 4. Ansible Repository
-Download this repository to the machine:
-```bash
-$ git clone git@github.com:aapit/ansible-workhorse
-```
-Run the installer in the repository directory:
-```bash
-$ cd ansible-workhorse
-$ make install
-```
-
-## 5. SSH keys
-Set up your private and public ssh key(s) in `~/.ssh`
+Tags are defined in `site.yml`.
